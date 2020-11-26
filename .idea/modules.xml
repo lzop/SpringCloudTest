@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/E-Client01/E-Client01.iml" filepath="$PROJECT_DIR$/E-Client01/E-Client01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/E-Server/E-Server.iml" filepath="$PROJECT_DIR$/E-Server/E-Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ribbon/Ribbon.iml" filepath="$PROJECT_DIR$/Ribbon/Ribbon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feign/feign.iml" filepath="$PROJECT_DIR$/feign/feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-zuul/service-zuul.iml" filepath="$PROJECT_DIR$/service-zuul/service-zuul.iml" />
+    </modules>
+  </component>
+</project>

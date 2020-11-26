@@ -1,0 +1,36 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8769
+spring:
+  application:
+    name: service-zuul
+
+##首先向eureka注册自己，端口为8769，
+  # 服务名为service-zuul；
+  # 以/api-a/ 开头的请求都指向service-ribbon；
+  #以/api-b/开头的请求都指向service-feign；
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign
+      ##下面是zuul超时问题处理
+  ribbon.eager-load.enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000
+ribbon:
+  ConnectTimeout: 500
+  ReadTimeout: 3000

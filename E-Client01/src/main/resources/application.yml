@@ -1,0 +1,28 @@
+  ##eureka服务注册中心设置
+eureka:
+  client:
+    ##未将   使用此model为客户端
+    #registerWithEureka: false
+    #fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8762
+
+spring:
+  ##设置spring应用名称
+  application:
+    name: service-hi
+  ##配置mysql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/basic_project?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+
+##mybatis配置
+mybatis:
+  ##对应的mybatis的xml文件存放位置
+  mapper-locations: classpath:mybatis/*.xml
+  type-aliases-package: com.example.eurekaclient01.entity
