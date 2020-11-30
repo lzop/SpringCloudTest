@@ -23,7 +23,7 @@ public class RedisController {
 
     private static final Logger logger = LoggerFactory.getLogger(RedisController.class);
 
-    private static int ExpireTime = -1;   // redis中存储的过期时间60s
+    private static int ExpireTime = -1;   // 当时间<0时为永久保存。时间单位为秒(s)
 
     @Resource
     private RedisUtil redisUtil;

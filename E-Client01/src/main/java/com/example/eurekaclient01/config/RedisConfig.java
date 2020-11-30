@@ -22,7 +22,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 public class RedisConfig extends CachingConfigurerSupport {
     /**
      * reTemplate相关配置
-     *
+     * 键-值  存入时的序列化要与取出时的相同
      * @param factory
      * @return
      */
